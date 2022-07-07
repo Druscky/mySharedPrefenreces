@@ -4,6 +4,7 @@
     <string name="btnEntrar">ENTRAR</string>
     <string name="btnCerrar">CERRAR SESIÓN</string>
     <string name="etName">Nombre</string>
+    <string name="noEmpty">El campo de datos no debe estar vacío</string>
 
 
 </resources>

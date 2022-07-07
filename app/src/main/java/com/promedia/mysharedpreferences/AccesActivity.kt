@@ -23,9 +23,22 @@ class AccesActivity : AppCompatActivity() {
         }
         val userName = prefs.getName()
         b.tvName.text = "¡Hola $userName!"
-        if (prefs.getColorCheck()) {
-            b.containerLayout.setBackgroundColor(
-                ContextCompat.getColor(this, R.color.containerColor))
+        if (prefs.getCheckColor()) {
+            val theColor = getMyColor(prefs.getColor())
+            b.cvAccess.setBackgroundColor(
+                ContextCompat.getColor(this, theColor))
         }
+    }
+    fun getMyColor(color:String):Int{
+        val resourceColor = when(color){
+            "Naranja" -> R.color.naranja_claro
+            "Gris" -> R.color.gris_claro
+            "Amarillo" -> R.color.amarillo_claro
+            "Azul" -> R.color.azul_claro
+            "Verde" -> R.color.verde_claro
+            "Turquesa" -> R.color.turquesa_claro
+            else -> R.color.white
+        }
+        return resourceColor
     }
 }
