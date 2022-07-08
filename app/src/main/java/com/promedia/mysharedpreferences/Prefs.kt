@@ -14,10 +14,10 @@ class Prefs (val context: Context) {
         storage.edit().putString(USER_NAME, name).apply()
     }
     fun saveColor(color:String){
-        storage.edit().putString(CHECK_COLOR, color).apply()
+        storage.edit().putString(COLOR, color).apply()
     }
     fun saveCheckColor(check:Boolean){
-        storage.edit().putBoolean(COLOR, check).apply()
+        storage.edit().putBoolean(CHECK_COLOR, check).apply()
     }
     fun getName():String {
         return storage.getString(USER_NAME, "")!!

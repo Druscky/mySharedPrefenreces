@@ -2,6 +2,7 @@ package com.promedia.mysharedpreferences
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.promedia.mysharedpreferences.SharedPreferences.Companion.prefs
 import com.promedia.mysharedpreferences.databinding.ActivityAccesBinding
@@ -23,6 +24,7 @@ class AccesActivity : AppCompatActivity() {
         }
         val userName = prefs.getName()
         b.tvName.text = "¡Hola $userName!"
+        Toast.makeText(this@AccesActivity, prefs.getColor(), Toast.LENGTH_SHORT).show()
         if (prefs.getCheckColor()) {
             val theColor = getMyColor(prefs.getColor())
             b.cvAccess.setBackgroundColor(
